@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #ccc;
+        }
+
+        .children {
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        parent
+        <div class="children">
+            children
+        </div>
+    </div>
+</body>
+
+<script>
+    const parent = document.querySelector('.parent');
+    const children = document.querySelector('.children')
+    children.addEventListener('click', (event) => {
+        console.log(1)
+    })
+    children.addEventListener('click', (event) => {
+        console.log(2)
+    })
+    children.addEventListener('click', (event) => {
+        console.log(3)
+    })
+    parent.addEventListener('click', (event) => {
+        console.log(4)
+    }, true)
+    // 怎么实现打印 4 1 2 3
+</script>
+
+</html>
